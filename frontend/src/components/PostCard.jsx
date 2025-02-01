@@ -7,7 +7,7 @@ const PostCard = ({ post }) => {
       {/* Image Section */}
       <div className="w-full h-48 relative">
         <img 
-          src={`http://localhost:5000${post.imageUrl}`} 
+          src={`https://post-management-backend-zyz8.onrender.com${post.imageUrl}`} 
           alt={post.title} 
           className="w-full h-full object-cover rounded-lg transition-all transform hover:scale-110" 
         />

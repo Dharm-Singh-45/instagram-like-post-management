@@ -16,7 +16,7 @@ function EditPost() {
     const fetchPost = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/posts/single-post/${id}`
+          `https://post-management-backend-zyz8.onrender.com/api/posts/single-post/${id}`
         );
         setTitle(response.data.title);
         setDescription(response.data.description);
@@ -38,7 +38,7 @@ function EditPost() {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/posts/update-post/${id}`,
+        `https://post-management-backend-zyz8.onrender.com/api/posts/update-post/${id}`,
         formData
       );
   
@@ -93,7 +93,7 @@ function EditPost() {
               Current Image
             </label>
             <img
-              src={`http://localhost:5000${existingImage}`}
+              src={`https://post-management-backend-zyz8.onrender.com${existingImage}`}
               alt="Current Post Image"
               className="w-full h-48 object-cover rounded-lg"
             />

@@ -11,7 +11,7 @@ function PostDetail() {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/posts/single-post/${id}`);
+        const response = await axios.get(`https://post-management-backend-zyz8.onrender.com/api/posts/single-post/${id}`);
         setPost(response.data.post); 
       } catch (error) {
         console.error("Error fetching post:", error);
@@ -23,7 +23,7 @@ function PostDetail() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5000/api/posts/delete-post/${id}`);
+      await axios.delete(`https://post-management-backend-zyz8.onrender.com/api/posts/delete-post/${id}`);
       navigate("/");
     } catch (error) {
       console.error("Error deleting post:", error);
@@ -32,7 +32,7 @@ function PostDetail() {
 
   if (!post) return <p className="text-center mt-10">Loading...</p>;
 
-  const imageUrl = `http://localhost:5000${post.imageUrl}`;
+  const imageUrl = `https://post-management-backend-zyz8.onrender.com${post.imageUrl}`;
 
   return (
     <div className="container mx-auto p-4">

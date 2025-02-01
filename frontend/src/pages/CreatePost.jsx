@@ -16,7 +16,7 @@ function CreatePost() {
     formData.append("description", description);
     formData.append("image", image);
 
-    await axios.post("http://localhost:5000/api/posts/create-post", formData);
+    await axios.post("https://post-management-backend-zyz8.onrender.com/api/posts/create-post", formData);
     navigate("/");
   };
 

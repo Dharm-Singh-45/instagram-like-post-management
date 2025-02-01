@@ -2,7 +2,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/posts";
+const API_URL = "https://post-management-backend-zyz8.onrender.com/api/posts";
+
 
 export const fetchPosts = createAsyncThunk("", async () => {
   const response = await axios.get(`${API_URL}/getallposts`);
